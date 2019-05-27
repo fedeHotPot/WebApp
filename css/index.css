@@ -1,0 +1,15 @@
+
+
+img:active {
+  transform: scale(0.7);
+}
+
+#containerNextModel{
+  position: fixed;
+  z-index: 1;
+  width: 100%;    
+  text-align: center;
+  bottom: 0%;
+  display: none;
+}
+
