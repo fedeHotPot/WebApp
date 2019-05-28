@@ -17,7 +17,6 @@ function initComponents() {
 }
 
 function openFullScreen(event) {
-  alert(`full screen ${document.fullscreenElement}`);
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
