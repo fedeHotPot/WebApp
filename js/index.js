@@ -2,6 +2,7 @@ let ground = undefined;
 let modelsInScene = false;
 let ishalloween = true;
 let soundH = undefined;
+let btnFullScreen = undefined;
 
 document.addEventListener("DOMContentLoaded", initComponents);
 
@@ -11,6 +12,19 @@ function initComponents() {
   infoModels.forEach(element => {
     modelsList.push(creatContainerModel(element))
   });
+  btnFullScreen = document.getElementById("btnFullScreen");
+  btnFullScreen.addEventListener('click', openFullScreen);
+}
+
+function openFullScreen(event) {
+  alert(`full screen ${document.fullscreenElement}`);
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+      if (document.exitFullscreen) {
+          document.exitFullscreen();
+      }
+  }
 }
 
 function creatContainerModel(infoModel) {

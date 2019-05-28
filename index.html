@@ -28,11 +28,11 @@
 </head>
 
 <body>
-
   <!-- If your app only interacts with image targets and not the world, disabling world tracking can improve speed. -->
   <div id="containerNextModel">    
     <img id="imgHalloween" src="imgs/halloween.png" onclick='selecScene(true)' width="20%">
     <img id="imgGarra" src="imgs/garra.png" onclick='selecScene(false)' width="20%">
+    <button id="btnFullScreen">Full screen</button>
   </div>
 
   <a-scene id="sceneManager" antialias="true" xrweb tap-place xrextras-almost-there xrextras-loading
@@ -49,13 +49,13 @@
     <a-camera position="0 160 30" raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;">
     </a-camera>
 
-    <a-light type="ambient" intensity="2"></a-light>
+    <a-light type="ambient" intensity="1"></a-light>
     
-    <a-entity
+    <!-- <a-entity
         light="type: directional;
                intensity: 5;"
         position="1 4.3 2.5">
-    </a-entity>
+    </a-entity> -->
     
     <a-entity id="ground" class="cantap" geometry="primitive: box"
       material="color: #ffffff; transparent: true; opacity: 0.0" scale="1000 2 1000" position="0 -1 0">
