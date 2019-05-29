@@ -7,8 +7,11 @@ let btnFullScreen = undefined;
 document.addEventListener("DOMContentLoaded", initComponents);
 
 function initComponents() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  }
   soundH = document.getElementById("audio");
-  soundH.setAttribute("autoplay", "true");  
+  soundH.setAttribute("autoplay", "true");
   infoModels.forEach(element => {
     modelsList.push(creatContainerModel(element))
   });
@@ -18,11 +21,11 @@ function initComponents() {
 
 function openFullScreen(event) {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
-      if (document.exitFullscreen) {
-          document.exitFullscreen();
-      }
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
   }
 }
 
@@ -64,10 +67,10 @@ function selecScene(boolVal) {
       }
     }
   });
-  if(boolVal){
-    soundH.setAttribute("volume", "1000"); 
-  }else{
-    soundH.setAttribute("volume", "0");  
+  if (boolVal) {
+    soundH.setAttribute("volume", "1000");
+  } else {
+    soundH.setAttribute("volume", "0");
   }
 }
 
