@@ -33,6 +33,9 @@ function creatLight(infoLight) {
 }
 
 function selecScene(boolVal) {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  }
   if (countModels != modelsList.length) {
     return;
   }
