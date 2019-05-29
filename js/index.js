@@ -68,6 +68,9 @@ AFRAME.registerComponent('tap-place', {
     }
 
     ground.addEventListener('click', event => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      }
       document.getElementById('containerNextModel').style.display = 'inline-block';
       const touchPoint = event.detail.intersection.point;
       modelsList.forEach(element => {
