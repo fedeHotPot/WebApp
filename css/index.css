@@ -10,23 +10,3 @@ img:active {
   bottom: 20%;
   display: none;
 }
-
-#btnFullScreen {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 10px;
-  color: #333333;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #FFD27D;
-  border-color: #d8d8d8;
-  border-width: 3px;
-  border-style: solid;
-  border-radius: 35px;
-  position: absolute;
-  left: 50vw;
-  top: 15px;
-  display: none;
-}
