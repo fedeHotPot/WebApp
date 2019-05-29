@@ -6,14 +6,11 @@ let soundH = undefined;
 document.addEventListener("DOMContentLoaded", initComponents);
 
 function initComponents() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  }
   soundH = document.getElementById("audio");
   soundH.setAttribute("autoplay", "true");
   infoModels.forEach(element => {
     modelsList.push(creatContainerModel(element))
-  }); 
+  });
 }
 
 function creatContainerModel(infoModel) {
@@ -65,6 +62,9 @@ AFRAME.registerComponent('tap-place', {
   init: function () {
     if (ground == undefined) {
       ground = document.getElementById('ground');
+    }
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
     }
 
     ground.addEventListener('click', event => {
